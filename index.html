@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Desenvolvimento | Sites e Automações</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --text-main: #f0f6fc;
+            --text-muted: #8b949e;
+            --accent-color: #58a6ff;
+            --accent-hover: #79c0ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--text-main);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--accent-color);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95srem;
+        }
+
+        /* Seção de Preços */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .price-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .price-card.featured {
+            border-color: var(--accent-color);
+        }
+
+        .price-header h3 {
+            font-size: 1.4rem;
+            color: var(--text-main);
+            margin-bottom: 5px;
+        }
+
+        .price-header .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin: 15px 0;
+        }
+
+        .price-header p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .price-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .price-features li {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .price-features li::before {
+            content: "✓";
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            background-color: var(--accent-color);
+            color: #0d1117;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Sobre / Por que trabalhar comigo */
+        .about-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 50px;
+        }
+
+        .about-card p {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header>
+            <h1>Active Desenvolvimento</h1>
+            <p>Sites, sistemas sob medida e automações para deixar o dia a dia do seu negócio mais simples — do primeiro contato ao projeto pronto.</p>
+        </header>
+
+        <!-- Serviços -->
+        <h2 class="section-title">O que eu faço</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>🌐 Landing Pages</h3>
+                <p>Site profissional pra apresentar seu negócio, atrair clientes e receber pedidos ou orçamentos direto pelo WhatsApp — sem complicação.</p>
+            </div>
+            <div class="card">
+                <h3>⚙️ Sistemas Web</h3>
+                <p>Painel de controle de estoque, agendamento ou cadastro de clientes, feito sob medida pra como o seu negócio funciona de verdade.</p>
+            </div>
+            <div class="card">
+                <h3>🤖 Automações</h3>
+                <p>Processos repetitivos, extração de dados e relatórios automáticos, pra você gastar tempo no que importa, e não em tarefa manual.</p>
+            </div>
+        </div>
+
+        <!-- Tabela de Preços Acessíveis -->
+        <h2 class="section-title">Investimento Justo</h2>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <div class="price-header">
+                    <h3>Landing Page Básica</h3>
+                    <div class="price">R$ 250</div>
+                    <p>Ideal para profissionais e pequenos negócios que querem marcar presença na internet.</p>
+                </div>
+                <ul class="price-features">
+                    <li>Página única (One Page) responsiva</li>
+                    <li>Design limpo e moderno</li>
+                    <li>Botão de contato direto para o WhatsApp</li>
+                    <li>Entrega rápida</li>
+                </ul>
+                <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Landing%20Page." target="_blank" class="btn">Contratar via WhatsApp</a>
+            </div>
+
+            <div class="price-card featured">
+                <div class="price-header">
+                    <h3>Automação / Script</h3>
+                    <div class="price">R$ 350</div>
+                    <p>Perfeito para automatizar tarefas repetitivas, planilhas ou rotinas diárias em Python.</p>
+                </div>
+                <ul class="price-features">
+                    <li>Script personalizado sob medida</li>
+                    <li>Integração com planilhas ou Telegram</li>
+                    <li>Instruções claras de uso</li>
+                    <li>Suporte pós-instalação</li>
+                </ul>
+                <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20Automações." target="_blank" class="btn">Contratar via WhatsApp</a>
+            </div>
+
+            <div class="price-card">
+                <div class="price-header">
+                    <h3>Sistema Web / Sob Medida</h3>
+                    <div class="price">R$ 600+</div>
+                    <p>Sistemas completos com painéis de controle, login e lógica personalizada.</p>
+                </div>
+                <ul class="price-features">
+                    <li>Painel de controle exclusivo</li>
+                    <li>Banco de dados integrado</li>
+                    <li>Totalmente adaptado à sua necessidade</li>
+                    <li>Acompanhamento completo</li>
+                </ul>
+                <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20um%20Sistema%20Web%20personalizado." target="_blank" class="btn">Falar sobre o Projeto</a>
+            </div>
+        </div>
+
+        <!-- Por que trabalhar comigo -->
+        <h2 class="section-title">Por que trabalhar comigo</h2>
+        <div class="about-card">
+            <p>Sou desenvolvedor em constante evolução na área de tecnologia — e é exatamente por isso que dou atenção total a cada projeto que assumo, sem terceirizar nada.</p>
+            <p>Meu compromisso é entregar soluções funcionais, diretas ao ponto e que tragam retorno real para o seu dia a dia.</p>
+        </div>
+
+        <!-- Rodapé -->
+        <footer>
+            <p>&copy; 2026 Active Desenvolvimento. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
